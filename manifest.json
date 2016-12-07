@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+
+    "name": "Sitewash",
+    "description": "A chrome extension to help screenshots of websites be more readable by the OCR available in Adobe Acrobat",
+    "version": "0.1",
+
+    "browser_action": {
+        // "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "https://ajax.googleapis.com/"
+    ]
+}

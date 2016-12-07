@@ -1,0 +1,47 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+    <head>
+        <title>Sitewash<sup>TM</sup>&reg;&copy;</title>
+        <style>
+            body {
+                font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+                font-size: 100%;
+                width: 300px;
+            }
+            
+            #wash {
+                width: 50%;
+                background-color: #15bf09;
+                border-radius: 3px;
+                margin: 10px auto;
+                text-align: center;
+                padding: 10px;
+                transition: background-color 250ms;
+                cursor: pointer;
+            }
+            #wash:hover {
+                background-color: #17e008;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div id="wash">Wash it!</div>
+
+        <div>
+            <label id="show-meta">
+                <input type="checkbox" />
+                <span>Show Meta Data</span>
+            </label>
+        </div>
+
+        <script src="popup.js"></script>
+    </body>
+</html>
+
