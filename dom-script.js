@@ -2,7 +2,11 @@
 
 
 	// TODO: make it so you can set a min size from popup.html, also add max font size set by user
-	var processFontSizes = function() {
+	var processFontSizes = function(minFontSize, maxFontSize) {
+
+		minFontSize = minFontSize ? minFontSize : 14;
+		maxFontSize = maxFontSize ? maxFontSize : 100;
+
 		var textElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'a', 'li'];
 
 		for (var i = 0; i < textElements.length; i++) {
@@ -13,7 +17,7 @@
 
 				var fontSize = parseInt(window.getComputedStyle(elements[j]).getPropertyValue('font-size').replace('px', ''));
 
-				if (fontSize < 14) { 
+				if (fontSize < minFontSize || fontSize > maxFontSize) { 
 					elements[j].setAttribute('class', 'font-size-override'); 
 				}
 
@@ -28,8 +32,13 @@
 
 	};
 
-
-
 	processFontSizes();
+
+	chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+
+		// console.log('hello from this side');
+		var scriptOptions = message.scriptOptions;
+		processFontSize(scriptOptions.minFontSize, scriptOptions.maxFontSize);
+	});
 
 })();

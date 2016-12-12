@@ -30,9 +30,29 @@
             #wash:hover {
                 background-color: #17e008;
             }
+
+            .meta-container {
+                margin-bottom:25px;
+            }
+
+            .text-range-container .header {
+                margin-bottom:10px;
+            }
+
+            .text-range-container #text-range-slider {
+                margin-bottom:15px;
+            }
+
+            .text-range-container span {
+                display:block;
+                width:100%;
+            }
         </style>
 
+        <link rel="stylesheet" href="vendor/nouislider.css"/>
+
         <script src="popup.js"></script>
+        <script src="vendor/nouislider.js"></script>
 
     </head>
     <body>
@@ -48,12 +68,19 @@
 
          -->
 
-        <div>
+        <div class="meta-container">
             <label id="show-meta">
                 <input type="checkbox" id="metadata-button"/>
                 <span>Show Meta Data</span>
 
             </label>
+        </div>
+
+        <div class="text-range-container">
+            <span class="header">Select font-size range (px):</span>
+            <div id="text-range-slider"></div>
+            <span id="min-view"></span>
+            <span id="max-view"></span>
         </div>
     </body>
 </html>
