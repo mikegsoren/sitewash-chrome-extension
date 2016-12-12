@@ -1,6 +1,4 @@
 (function() {
-	console.log('Metadata script loaded.');
-
 	var dataObject = {};
 
 	var title = document.getElementsByTagName('title')[0];
@@ -16,8 +14,6 @@
 			}
 		}
 	}
-
-	console.log(dataObject);
 
 	var body = document.getElementsByTagName('body')[0];
 

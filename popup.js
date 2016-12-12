@@ -13,8 +13,6 @@ function createListeners() {
 
 function wash() {
 
-	console.log('wash');
-
 	var queryInfo = {
 	   active: true,
 	   currentWindow: true
