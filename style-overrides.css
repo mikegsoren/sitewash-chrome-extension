@@ -6,6 +6,10 @@
 	opacity: 1 !important;
 } 
 
+section, nav, header, footer, article, h1, h2, h3, h4, h5, h6 {
+	border: 1px solid #000 !important;
+}
+
 img {
 	opacity: 0.1 !important;
 }

@@ -12,14 +12,14 @@ fontSizeScript += "for (var j = 0; j < elements.length; j++) {";
 
 fontSizeScript += "var fontSize = parseInt(window.getComputedStyle(elements[j]).getPropertyValue('font-size').replace('px', ''));";
 
-fontSizeScript += "console.log(fontSize);";
+// fontSizeScript += "console.log(fontSize);";
 
 fontSizeScript += "if (fontSize < 14) { elements[j].setAttribute('class', 'font-size-override'); }";
 
 fontSizeScript += "}}";
 
 
-console.log(fontSizeScript);
+// console.log(fontSizeScript);
 
 function createListener() {
 
