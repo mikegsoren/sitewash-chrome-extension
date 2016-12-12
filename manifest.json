@@ -5,16 +5,21 @@
     "description": "A chrome extension to help screenshots of websites be more readable by the OCR available in Adobe Acrobat",
     "version": "0.1",
 
+    "permissions": [
+      "tabs",
+      "activeTab"
+    ],
+
     "browser_action": {
         "default_icon": "icon.png",
         "default_popup": "popup.html"
     },
 
-    "content_scripts": [
-        {
-            "matches": ["http://*/*", "https://*/*"],
-            "css": [],
-            "js": ["dom-script.js"]
-        }
-    ]
+    // "content_scripts": [
+    //     {
+    //         "matches": ["http://*/*", "https://*/*"],
+    //         "css": [],
+    //         "js": ["dom-script.js"]
+    //     }
+    // ]
 }
